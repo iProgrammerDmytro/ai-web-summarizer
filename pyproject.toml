@@ -14,6 +14,7 @@ dependencies = [
     "chardet>=4.0.0",
     "openai>=1.0.0",
     "jupyterlab>=4.0.0",
+    "gradio>=4.0.0",
 ]
 authors = [
     {name = "Dmytro Lytvynenko", email = "litv1n.true@gmail.com"},
@@ -31,6 +32,7 @@ dev = [
 
 [project.scripts]
 pluggable-scrapper = "app.presentation.cli:main"
+ai-web-summarizer = "app.presentation.gradio_app:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
