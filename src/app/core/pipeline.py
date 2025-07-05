@@ -19,9 +19,7 @@ class SummarizationPipeline:
         "Avoid navigation content and marketing fluff."
     )
 
-    def __init__(
-        self, *, fetcher: ContentFetcher, parser: ContentParser, llm_client: LLMClient
-    ):
+    def __init__(self, *, fetcher: ContentFetcher, parser: ContentParser, llm_client: LLMClient):
         self.fetcher = fetcher
         self.parser = parser
         self.llm_client = llm_client

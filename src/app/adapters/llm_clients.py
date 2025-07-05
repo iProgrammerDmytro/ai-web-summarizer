@@ -34,9 +34,7 @@ class OllamaClient:
         logger.info(f"Generating summary via {model}")
         for attempt in range(self.max_retries):
             try:
-                response = self.client.chat.completions.create(
-                    model=model, messages=messages
-                )
+                response = self.client.chat.completions.create(model=model, messages=messages)
                 choice = response.choices[0].message
                 return LLMResponse(
                     content=choice.content,

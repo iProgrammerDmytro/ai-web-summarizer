@@ -21,9 +21,7 @@ class RobustSoupParser:
         logger.info(f"Parsing {response.final_url}")
         encoding = response.encoding or self._detect_encoding(response.content)
         try:
-            soup = BeautifulSoup(
-                response.content.decode(encoding, errors="replace"), "html.parser"
-            )
+            soup = BeautifulSoup(response.content.decode(encoding, errors="replace"), "html.parser")
         except Exception as e:
             raise ParseError(str(e)) from e
 

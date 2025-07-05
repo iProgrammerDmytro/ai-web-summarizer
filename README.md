@@ -38,12 +38,37 @@ src/app/
 - Python 3.9+
 - Ollama (for local LLM inference)
 
+### Setup Ollama (Local LLM)
+
+1. **Install Ollama**:
+
+   ```bash
+   # macOS
+   brew install ollama
+
+   # Linux
+   curl -fsSL https://ollama.com/install.sh | sh
+
+   # Windows - Download from https://ollama.com/download
+   ```
+
+2. **Start Ollama server**:
+
+   ```bash
+   ollama serve
+   ```
+
+3. **Pull the required model**:
+   ```bash
+   ollama pull llama3.2
+   ```
+
 ### Installation
 
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/pluggable-scrapper.git
+git clone https://github.com/iProgrammerDmytro/ai-web-summarizer
 cd pluggable-scrapper
 ```
 
@@ -109,15 +134,6 @@ pip install -e ".[dev]"
 # Run code formatting
 black src/
 isort src/
-
-# Run type checking
-mypy src/
-```
-
-### Testing
-
-```bash
-pytest tests/
 ```
 
 ### Code Quality
@@ -126,8 +142,6 @@ The project uses:
 
 - **Black** for code formatting
 - **isort** for import sorting
-- **mypy** for static type checking
-- **pytest** for testing
 
 ## 🏗️ Extending the System
 
