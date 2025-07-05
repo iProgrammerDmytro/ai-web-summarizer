@@ -87,6 +87,18 @@ pip install -e .
 
 ### Usage
 
+#### Web Interface (Gradio)
+
+```bash
+# Launch the web interface
+ai-web-summarizer
+
+# Or run directly
+python src/app/presentation/gradio_app.py
+```
+
+Then open your browser to `http://localhost:7860`
+
 #### Command Line Interface
 
 ```bash
